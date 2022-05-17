@@ -17,7 +17,8 @@
     <ul class="list">
         <?php while($row=mysqli_fetch_assoc($result)) { ?>
         <li>
-            [<a href="cat-del.php?id =<?php $row['id'] ?>" class="del" onclick="return confirm('Are you sure?')">del</a>]
+            [<a href="cat-del.php?id=<?php echo $row['id']?>" class="del" onclick="return confirm('Are you sure?')">del</a>]
+            [<a href="cat-edit.php?id=<?php $row['id'] ?>" class="edit">edit</a>]
             <?php echo $row['name'];  ?>
         </li>
         <?php } ?>
